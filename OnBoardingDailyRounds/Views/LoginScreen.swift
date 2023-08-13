@@ -87,6 +87,9 @@ struct LoginScreen: View {
         }
         .frame(maxWidth: .infinity, alignment: .center)
       }
+      .onAppear {
+        viewModel.signedIn = viewModel.isSignedIn
+      }
       .padding()
       .background(
         Image("background_effect")
